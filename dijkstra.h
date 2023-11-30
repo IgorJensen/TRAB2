@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "heap.h"
 
-Vector visitados_construct();
+Vector *visitados_construct(int size);
 
 
 #endif
