@@ -26,7 +26,9 @@ Vector *vizinhos_get(Vector *visitados, Vector *nodes, int origem){
 
         if(aux->node_source == origem && visita == false){
             vector_push_back(vizinhos, aux);
+            
         }
+        //printf("%d", aux->valor_node);
     }
     return vizinhos;
 }
@@ -64,6 +66,7 @@ Vector *dijkstra_solve(Vector_Mapa *problem_data){
         path_node->node_source = no_removido->node_source;
         
         Vector *vizinhos = vizinhos_get(visitados, problem_data->nodes, no_removido->node_source);
+        
         
         for(int i = 0; i < vector_size(vizinhos); i++){
             Node_Mapa *Node = vector_get(vizinhos, i);

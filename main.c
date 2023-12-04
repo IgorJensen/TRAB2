@@ -7,13 +7,15 @@
 
 
 int main(){
-    Vector_Mapa *arquivo = leitura_arquivo(); 
+    FILE *fptr = fopen("arquivo.txt", "r");
+    Vector_Mapa *arquivo = leitura_arquivo(fptr); 
     dijkstra_solve(arquivo);
     printf("a");
 /*
     Vector *caminhos = dijkstra_solve(arquivo);
     paths_print(caminhos);
     paths_destroy(caminhos);*/
+    fclose(fptr);
     leitura_arquivo_destroy(arquivo);
     return 0;
 }

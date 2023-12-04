@@ -52,9 +52,15 @@ void heap_push(Heap *heap, void *data, double priority){
     heap->nodes[heap->size].data = data;
     heap->nodes[heap->size].priority = priority;
     heap->size++;
-
+    
+    
     heapfy_up(heap);
-
+    printf("[");
+    for(int i=0; i< heap->size; i++)
+    {
+        printf("%d, ", heap->nodes[i].priority);
+    }
+    printf("]");
 
 } // O(log N)
 

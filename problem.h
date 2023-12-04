@@ -19,7 +19,7 @@ typedef struct Vector_Mapa{
 
 Node_Mapa *node_mapa_construct(int source, int valor, int custo);
 
-Vector_Mapa *leitura_arquivo();
+Vector_Mapa *leitura_arquivo(FILE *fptr);
 
 Vector_Mapa *vector_mapa_construct();
 
