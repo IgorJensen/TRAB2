@@ -23,4 +23,6 @@ Vector_Mapa *leitura_arquivo();
 
 Vector_Mapa *vector_mapa_construct();
 
+void leitura_arquivo_destroy(Vector_Mapa *v);
+
 #endif

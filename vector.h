@@ -5,13 +5,13 @@ typedef void *data_type;
 
 typedef struct Vector Vector;
 
-// Cria um vetor vazio
+//Cria um vetor vazio
 Vector *vector_construct();
 
-// Adiciona um elemento no final do vetor
+//Adiciona um elemento no final do vetor
 void vector_push_back(Vector *v, data_type val);
 
-// Retorna o i-ésimo elemento do vetor
+//Retorna o i-ésimo elemento do vetor
 data_type vector_get(Vector *v, int i);
 
 // Atribui o valor val ao i-ésimo elemento do vetor

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../ed1-trabalho-1"
+		},
+		{
+			"path": "../trabalho"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"LEITURA.C": "c",
+			"problem.h": "c"
+		}
+	}
+}

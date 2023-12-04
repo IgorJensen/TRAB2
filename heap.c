@@ -54,22 +54,18 @@ void heap_push(Heap *heap, void *data, double priority){
     heap->size++;
 
     heapfy_up(heap);
-    
-    for (int i = 0; i < heap->size; i++)
-    {
-        printf("%d\n", heap->nodes[i].priority);
-    }
-    printf("\n");
+
 
 } // O(log N)
 
-/*bool heap_empty(Heap *heap){ //verify if the heap is empty
+bool heap_empty(Heap *heap){ //verify if the heap is empty
     
     if(heap->size == 0){
         return true;
     }
+    else return false;
 } // O(1)
-*/
+
 void heapfy_down(Heap *heap){ //makes the lower number ocupy the 1 slot on heap 
     
     int indexpai = 0;
@@ -117,9 +113,7 @@ void *heap_pop(Heap *heap){
     heap->nodes[heap->size-1].priority = 0;
     heap->size--;
     heapfy_down(heap);
-    for(int i = 0 ; i< heap->size; i++){
-        printf("%d\n", heap->nodes[i].priority);
-    }
+
     return aux.data; //return the removed number
 
 } // O(log N)

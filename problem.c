@@ -4,10 +4,10 @@
 
 Node_Mapa *node_mapa_construct(int source, int valor, int custo){
     Node_Mapa *m = (Node_Mapa *)calloc(1, sizeof(Node_Mapa));
-    m->node_source = source;
-    m->custo = custo;
+    m->node_source = source; 
+    m->custo = custo; //custo para nó alvo
     m->custo_total = 0;
-    m->valor_node = valor;
+    m->valor_node = valor; // nó alvo
     return m;
 };
 
@@ -26,7 +26,7 @@ Vector_Mapa *leitura_arquivo(){
     FILE *fptr;
 
 // Open a file in read mode
-    fptr = fopen("filename.txt", "r");
+    fptr = fopen("arquivo.txt", "r");
     fscanf(fptr, "%d\n", &node_count); // reads 1 line
     v->size = node_count + 1; // nodes vector size
 

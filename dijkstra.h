@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "heap.h"
+#include "vector.h"
+#include "problem.h"
 
-Vector *visitados_construct(int size);
-
+Vector *dijkstra_solve(Vector_Mapa *problem_data);
 
 #endif
